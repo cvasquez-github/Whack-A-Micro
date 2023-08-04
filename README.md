@@ -1,6 +1,8 @@
 # Whack-A-Micro
 How to convert an Alesis Compact Kit 4 Electronic Drump into a USB Game Controller, using an Arduino Micro board.
 
+![alt text](https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/IMG-3058.JPG)
+
 ## Hardware
 - Connect A0 to Piezo electric sensor 1 (+) pin (yellow), with a 1M Ohm resitor to ground.
 - Connect A1 to Piezo electric sensor 2 (+) pin (yellow), with a 1M Ohm resitor to ground.
@@ -35,6 +37,7 @@ if (piezo1V >= threshold && (myTime - Hit1Time) > TimeThreshold)
       Hit1Time = millis();
     }
 ```
+Take a look at the sample [PiezoToButton_Micro.i](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino) file.
 
 ## Unity Software
 Add a third button to your Project Settings Input Manager:
