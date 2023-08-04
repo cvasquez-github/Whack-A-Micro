@@ -40,7 +40,7 @@ if (piezo1V >= threshold && (myTime - Hit1Time) > TimeThreshold)
 Take a look at the sample [PiezoToButton_Micro.i](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino) file.
 
 Will be detected in Windows as a 32 button joystick, like this:
-![alt text]([https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/Micro-Joystick.JPG)
+![alt text](https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/Micro-Joystick.JPG)
 
 ## Unity Software
 Add a third button to your Project Settings Input Manager:
