@@ -1,5 +1,5 @@
 # Whack-A-Micro
-How to use an Alesis Compact Kit 4 Electronic Drump as a USB Game Controller, using an Arduino Micro board.
+How to use an Alesis Compact Kit 4 Electronic Drum as a USB Game Controller, using an Arduino Micro board.
 
 ![alt text](https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/IMG-3058.JPG)
 
