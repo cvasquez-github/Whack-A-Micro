@@ -1,5 +1,5 @@
 # Whack-A-Micro
-How to convert an Alesis Compact Kit 4 Electronic Drump into a USB Game Controller, using an Arduino Micro board.
+How to use an Alesis Compact Kit 4 Electronic Drump as a USB Game Controller, using an Arduino Micro board.
 
 ![alt text](https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/IMG-3058.JPG)
 
@@ -12,11 +12,11 @@ How to convert an Alesis Compact Kit 4 Electronic Drump into a USB Game Controll
 
 | Arduino Micro   | Connected to                                              |
 | :-------------: | :-------------:                                           |
-| A0              | Drump Piezoelectric sensor 1 + (1M Ohm resitor to ground) |
-| A1              | Drump Piezoelectric sensor 2 + (1M Ohm resitor to ground) |
-| A2              | Drump Piezoelectric sensor 3 + (1M Ohm resitor to ground) |
-| A3              | Drump Piezoelectric sensor 4 + (1M Ohm resitor to ground) |
-| GND             | Drump Piezoelectric sensor 1,2,3,4 -                      |
+| A0              | Drum Piezoelectric sensor 1 + (1M Ohm resitor to ground) |
+| A1              | Drum Piezoelectric sensor 2 + (1M Ohm resitor to ground) |
+| A2              | Drum Piezoelectric sensor 3 + (1M Ohm resitor to ground) |
+| A3              | Drum Piezoelectric sensor 4 + (1M Ohm resitor to ground) |
+| GND             | Drum Piezoelectric sensor 1,2,3,4 -                      |
 
 ## Arduino Software
 You will need to import the Joystick library: https://github.com/MHeironimus/ArduinoJoystickLibrary
@@ -44,7 +44,7 @@ Will be detected in Windows as a 32 button joystick, like this:
 ![alt text](https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/Micro-Joystick.JPG)
 
 ## Unity Software
-Add a third button to your Project Settings Input Manager:
+Add a fourth button to your Project Settings Input Manager:
 - Name: Fire4
 - Positive Button: joystick button 3
 
