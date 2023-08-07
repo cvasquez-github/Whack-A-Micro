@@ -46,7 +46,7 @@ Add a fourth button to your Project Settings Input Manager:
 - Name: Fire4
 - Positive Button: joystick button 3
 
-Then read your inputs inside the Update() loop and trigger the actions you want, like:
+Then read your inputs inside the Update() loop and trigger the actions you want, for instance:
 ```
 if (Input.GetButtonDown("Fire1"))
         {
