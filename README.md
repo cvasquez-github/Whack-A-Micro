@@ -20,14 +20,16 @@ How to use an Alesis Compact Kit 4 Electronic Drum as a USB Game Controller, usi
 
 ## Arduino Software
 You will need to import the Joystick library: https://github.com/MHeironimus/ArduinoJoystickLibrary
+When using this library, your Arduino Micro will be detected in Windows as a 32 button joystick, like this:
+![alt text](https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/Micro-Joystick.JPG)
 
-Then read each analog input like:
+Read the piezo electric sensor value using the built-in analogRead() function:
 ```
 const int Piezo1In = A0;
 float piezo1V = analogRead(Piezo1In) / 1023.0 * 5.0;
 ```
 
-Finally, toggle the corresponding Button ON and then OFF back again like:
+To push/toggle the joystick button, use the toggle the Joystick.setButton() methods, setting the button 1 on and then, a couple miliseconds later, to 0, like: 
 ```
 if (piezo1V >= threshold && (myTime - Hit1Time) > TimeThreshold) 
     {
@@ -37,18 +39,14 @@ if (piezo1V >= threshold && (myTime - Hit1Time) > TimeThreshold)
       Hit1Time = millis();
     }
 ```
-Take a look at the sample [PiezoToButton_Micro.i](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino) file.
-
-Will be detected in Windows as a 32 button joystick, like this:
-
-![alt text](https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/Micro-Joystick.JPG)
+Take a look at the sample [PiezoToButton_Micro.ino](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino) file.
 
 ## Unity Software
 Add a fourth button to your Project Settings Input Manager:
 - Name: Fire4
 - Positive Button: joystick button 3
 
-Then read your inputs inside the Update() loop and fire the actions you want like:
+Then read your inputs inside the Update() loop and trigger the actions you want, like:
 ```
 if (Input.GetButtonDown("Fire1"))
         {
