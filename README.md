@@ -30,7 +30,7 @@ const int Piezo1In = A0;
 float piezo1V = analogRead(Piezo1In) / 1023.0 * 5.0;
 ```
 
-To push/toggle the joystick button, use the toggle the Joystick.setButton() methods, setting the button 1 on and then, a couple miliseconds later, to 0, like: 
+To push/toggle the joystick button, use the Joystick.setButton() method, setting the button to 1 on and then, a couple miliseconds later, to 0, like: 
 ```
 if (piezo1V >= threshold && (myTime - Hit1Time) > TimeThreshold) 
     {
