@@ -62,3 +62,5 @@ if (Input.GetButtonDown("Fire1"))
             StartCoroutine(ShowTimeout(OneOff, 0.05f));
         }
 ```
+
+![alt text](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/unity_test.gif?raw=true)
