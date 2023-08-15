@@ -24,7 +24,18 @@ You will need to import the Joystick library: https://github.com/MHeironimus/Ard
 When using this library, your Arduino Micro will be detected in Windows as a 32 button joystick, like this:
 ![alt text](https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/Micro-Joystick.JPG)
 
-Read the piezo electric sensor value using the built-in analogRead() function:
+First, initialize the Joystick on setup(), like this:
+```
+Joystick.begin(true);
+Joystick.setXAxisRange(-127, 127);
+Joystick.setYAxisRange(-127, 127);
+Joystick.setZAxisRange(0, 255);
+Joystick.setXAxis(0);
+Joystick.setYAxis(0);
+Joystick.setZAxis(0);
+```
+
+Then, read the piezo electric sensor value using the built-in analogRead() function:
 ```
 const int Piezo1In = A0;
 float piezo1V = analogRead(Piezo1In) / 1023.0 * 5.0;
@@ -41,6 +52,7 @@ if (piezo1V >= threshold && (myTime - Hit1Time) > TimeThreshold)
     }
 ```
 Take a look at the sample [PiezoToButton_Micro.ino](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino) file.
+Here is another sample to trigger one single button at a time, preventing a problem I've noticed when a secondary piezo is triggered only because of the vibration caused by hitting a nearby one [PiezoToButton_Micro.ino](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino)](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro_Single.ino)
 
 ## Unity Software
 Add a fourth button to your Project Settings Input Manager:
