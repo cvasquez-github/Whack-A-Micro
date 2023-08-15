@@ -57,7 +57,7 @@ if (piezo1V >= threshold && (myTime - Hit1Time) > TimeThreshold)
 ```
 Sample script: [PiezoToButton_Micro.ino](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino)
 
-Here is another sample to trigger one single button at a time, preventing a problem I've noticed when a secondary piezo is triggered only because of the vibration caused by hitting a nearby one [PiezoToButton_Micro.ino](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino)
+Here is another sample to trigger one single button at a time, preventing a problem I've noticed when a secondary piezo is triggered only because of the vibration caused by hitting a nearby one [PiezoToButton_Micro_Single.ino](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro_Single.ino)
 
 ## Unity Software
 Add a fourth button to your Project Settings Input Manager:
