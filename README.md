@@ -20,6 +20,8 @@ How to use an Alesis Compact Kit 4 Electronic Drum as a USB Game Controller, usi
 
 ## Arduino Software
 You will need to import the Joystick library: https://github.com/MHeironimus/ArduinoJoystickLibrary
+#include <Joystick.h>
+Joystick_ Joystick;
 
 When using this library, your Arduino Micro will be detected in Windows as a 32 button joystick, like this:
 ![alt text](https://raw.githubusercontent.com/cvasquez-github/Whack-A-Micro/main/Micro-Joystick.JPG)
