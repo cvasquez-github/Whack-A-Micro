@@ -55,7 +55,7 @@ if (piezo1V >= threshold && (myTime - Hit1Time) > TimeThreshold)
       Hit1Time = millis();
     }
 ```
-Sample script: [PiezoToButton_Micro.ino](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino).
+Sample script: [PiezoToButton_Micro.ino](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino)
 
 Here is another sample to trigger one single button at a time, preventing a problem I've noticed when a secondary piezo is triggered only because of the vibration caused by hitting a nearby one [PiezoToButton_Micro.ino](https://github.com/cvasquez-github/Whack-A-Micro/blob/main/PiezoToButton_Micro.ino)
 
